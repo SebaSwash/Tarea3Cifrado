@@ -43,17 +43,19 @@ def xxtea_config():
       op_generar_html = int(op_generar_html)
 
       if op_generar_html:
-        html_generator(mensaje_cifrado)
+        html_generator(mensaje_cifrado,key)
       
 # Generador de archivo html con las configuraciones correspondientes
-def html_generator(mensaje_cifrado):
+def html_generator(mensaje_cifrado,llave_cifrado):
   html_file = open('sitio.html','wb')
 
   html_struct = """
+    <!DOCTYPE html>
     <html>
       <head>
         <title>Tarea 3 - SITS</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <meta charset="UTF-8" />
       </head>
       <body>
 
@@ -66,6 +68,7 @@ def html_generator(mensaje_cifrado):
               <h5 class="card-title my-auto text-center text-white">Este sitio contiene un mensaje secreto 🔑😶</h5>
             </div>
             <div class="card-body text-center" style="background:#ECF0F1;">
+              <p>Texto cifrado con llave: <strong>%llave_cifrado%</strong></p>
               <div class="XXTEA" id="%msg_cifrado%"></div>
             </div>
           </div>
@@ -76,7 +79,8 @@ def html_generator(mensaje_cifrado):
   """
   # Se reemplaza el mensaje cifrado en el id del div correspondiente
   html_struct = html_struct.replace("%msg_cifrado%",mensaje_cifrado.decode())
-  
+  html_struct = html_struct.replace("%llave_cifrado%",llave_cifrado)
+
   html_file.write(html_struct.encode(encoding="UTF-8"))
   html_file.close()
 

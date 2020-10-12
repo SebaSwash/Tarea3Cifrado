@@ -5,6 +5,8 @@
 // @description  Descifrador XXTEA - Tarea 3 Criptografía y Seguridad en Redes - Sebastián Toro Severino
 // @author       You
 // @match        https://b9twy.csb.app/
+// @updateURL    https://github.com/SebaSwash/Tarea3Cifrado/blob/main/Javascript%20XXTEA%20Cipher.user.js
+// @downloadURL  https://github.com/SebaSwash/Tarea3Cifrado/blob/main/Javascript%20XXTEA%20Cipher.user.js
 // @grant        none
 // ==/UserScript==
 

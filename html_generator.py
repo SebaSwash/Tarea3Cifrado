@@ -2,6 +2,7 @@
 # Sebastián Ignacio Toro Severino
 # =======================================================
 import os,xxtea
+from base64 import b64encode,b64decode
 
 # Configuración de parámetros para algoritmo XXTEA
 def xxtea_config():
@@ -33,8 +34,8 @@ def xxtea_config():
     if op_confirmacion.lower() == "s":
       # Se cifra el mensaje entregado según las configuraciones confirmadas
       byte_data = data.encode("utf-8") # Se codifica el mensaje en UTF-8
-      # Se genera el mensaje cifrado a partir de byte_data y la configuración establecida
-      mensaje_cifrado = xxtea.encrypt_hex(byte_data,key,rounds=num_rounds)
+      # Se genera el mensaje cifrado (base 64) a partir de byte_data y la configuración establecida
+      mensaje_cifrado = b64encode(xxtea.encrypt(byte_data,key,rounds=num_rounds))
       print("")
       print("> Mensaje cifrado resultante: "+str(mensaje_cifrado)+"")
       op_generar_html = input("[0] Nueva configuración | [1] Generar archivo html: ")

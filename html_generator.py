@@ -15,9 +15,9 @@ def xxtea_config():
     while len(key.encode("utf-8")) != 16:
       key = input("Ingrese key (16 bytes | UTF-8 soportado): ")
     # >> N° de rounds para algoritmo XXTEA
-    num_rounds = int(input("Ingrese la cantidad de rounds (>= 1): "))
-    while num_rounds < 1:
-      num_rounds = int(input("Ingrese la cantidad de rounds (>= 1): "))
+    num_rounds = int(input("Ingrese la cantidad de rounds (>= 0): "))
+    while num_rounds < 0:
+      num_rounds = int(input("Ingrese la cantidad de rounds (>= 0): "))
     # >> Data para cifrar
     data = input("Ingrese el mensaje a cifrar: ")
 
@@ -68,7 +68,7 @@ def html_generator(mensaje_cifrado,llave_cifrado):
               <h5 class="card-title my-auto text-center text-white">Este sitio contiene un mensaje secreto 🔑😶</h5>
             </div>
             <div class="card-body text-center" style="background:#ECF0F1;">
-              <p>Texto cifrado con llave: <strong>%llave_cifrado%</strong></p>
+              <p>Texto cifrado con llave: <strong id="llaveCifrado">%llave_cifrado%</strong></p>
               <div class="XXTEA" id="%msg_cifrado%"></div>
             </div>
           </div>

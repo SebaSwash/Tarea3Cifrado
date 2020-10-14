@@ -47,7 +47,7 @@ def xxtea_config():
       
 # Generador de archivo html con las configuraciones correspondientes
 def html_generator(mensaje_cifrado,llave_cifrado):
-  html_file = open('sitio.html','wb')
+  html_file = open('index.html','wb')
 
   html_struct = """
     <!DOCTYPE html>

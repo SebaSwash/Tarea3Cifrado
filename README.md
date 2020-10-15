@@ -1,5 +1,4 @@
-## Tarea 3 : Cifrado
-#### Criptografía y Seguridad en Redes (CIT2105_CA01)
+## Tarea 3 : Cifrado | Criptografía y Seguridad en Redes (CIT2105_CA01)
 #### Sebastián Ignacio Toro Severino
 #### Fecha de entrega: 16/10/2020
 ---

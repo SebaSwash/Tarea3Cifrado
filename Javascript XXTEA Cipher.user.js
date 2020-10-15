@@ -4,6 +4,8 @@
 // @version      0.1
 // @description  Tarea 3: Cifrado - Criptografía y Seguridad en Redes
 // @author       Sebastián Toro Severino
+// @updateURL    https://github.com/SebaSwash/Tarea3Cifrado/blob/main/Javascript%20XXTEA%20Cipher.user.js
+// @downloadURL  https://github.com/SebaSwash/Tarea3Cifrado/blob/main/Javascript%20XXTEA%20Cipher.user.js
 // @match        https://sebaswash.github.io/Tarea3Cifrado/
 // @grant        none
 // ==/UserScript==

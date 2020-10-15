@@ -4,3 +4,4 @@
 ---
 * Librería de Python utilizada: https://pypi.org/project/xxtea/ (Adicionalmente se utiliza base64 y os)
 * Librería de Javascript utilizada: https://github.com/napisani/xxtea-html5
+* Render HTML: https://sebaswash.github.io/Tarea3Cifrado/
